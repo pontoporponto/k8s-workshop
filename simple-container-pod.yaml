@@ -1,9 +1,7 @@
 apiVersion: v1
 kind: Pod
 metadata:
-  name: simple-container
-  labels:
-    app: workshop
+  name: simple-container-workshop
 spec:
   containers:
   - name: simple-container
