@@ -6,3 +6,8 @@ spec:
   containers:
   - name: simple-container
     image: gcr.io/pontoporponto/simple-container:latest
+    resources:
+      limits:
+        cpu: 250m
+      requests:
+        memory: 250Mi
