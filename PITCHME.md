@@ -1,5 +1,5 @@
 ## First Steps on Kubernetes
-#### Mindera Open Day, 19 Oct
+#### Mindera Tech Day, 19 Oct
 
 @snap[south-east text-06]
 César Rodrigues
@@ -14,15 +14,20 @@ Senior Backend Developer
 
 +++
 
-@snap[north-west span-85]
-#### What is Kubernetes?
+@snap[north-west span-40]
+@box[bg-orange text-white rounded](Container Orchestration Tool)
 @snapend
 
-@snap[west span-85]
-- Container Orchestration Tool
-- Kubernetes Objects
-- Declarative Intent
-- Managed vs. Serviced
+@snap[north-east span-40]
+@box[bg-orange text-white rounded](Kubernetes Objects)
+@snapend
+
+@snap[south-west span-40]
+@box[bg-orange text-white rounded](Declarative Intent)
+@snapend
+
+@snap[south-east span-40]
+@box[bg-orange text-white rounded](Managed vs. Serviced)
 @snapend
 
 +++
@@ -31,12 +36,28 @@ Senior Backend Developer
 #### Topics Covered
 @snapend
 
-@snap[west span-85]
-- Kubernetes API / kubectl
-- Pod
-- Deployment (ReplicaSet / Probes)
-- Horizontal Pod Autoscaler
-- DaemonSet
+@snap[north-west span-40]
+@box[bg-orange text-white rounded](Kubernetes API / kubectl)
+@snapend
+
+@snap[north-east span-40]
+@box[bg-orange text-white rounded](Pod)
+@snapend
+
+@snap[west span-40]
+@box[bg-orange text-white rounded](Deployment (ReplicaSet / Probes))
+@snapend
+
+@snap[east span-40]
+@box[bg-orange text-white rounded](Services / Networking)
+@snapend
+
+@snap[south-west span-40]
+@box[bg-orange text-white rounded](Horizontal Pod Autoscaler)
+@snapend
+
+@snap[south-east span-40]
+@box[bg-orange text-white rounded](DaemonSet)
 @snapend
 
 +++
@@ -57,10 +78,73 @@ kubectl config use-context workshop
 
 +++
 
+## Pod
+#### 1 Pod == 1 Container
+
+@box[bg-gray fragment span-100](kubectl apply -f simple-container-pod.yaml)
+
++++
+
 @snap[span-100]
 @code[yaml zoom-12 code-max](simple-container-pod.yaml)
 @snapend
 
+@[3,4](Define Pod name)
+@[6,7,8](Specify container)
+
 +++
 
-bajoras
+## Deployment
+#### Pod Lifecycle Management
+
+@box[bg-gray fragment span-100](kubectl apply -f simple-service-deployment.yaml)
+
++++
+
+@snap[span-100]
+@code[yaml zoom-11 code-max](simple-service-deployment.yaml)
+@snapend
+
++++
+
+@snap[north]
+## Probes
+@ul 
+- liveness
+- readiness
+- Exec
+- TCP
+- HTTP
+- periodSeconds
+- timeoutSeconds
+- failureThreshold
+- successThreshold
+- initialDelaySeconds
+@ulend
+@snapend
+
++++
+
+```Yaml
+livenessProbe:
+    httpGet:
+        path: /workshop/simple
+        port: 8080
+    periodSeconds: 10
+    timeoutSeconds: 5
+    failureThreshold: 2
+```
+
++++
+
+## ReplicaSet
+
+@box[bg-gray fragment span-100](replicas: 2)
+@box[bg-gray fragment span-100](kubectl scale deployment \<br />simple-service-workshop --replicas=2)
+
++++
+
+## Rollout Update Policy
+
+@box[bg-gray fragment span-100](replicas: 2)
+@box[bg-gray fragment span-100](kubectl scale deployment \<br />simple-service-workshop --replicas=2)

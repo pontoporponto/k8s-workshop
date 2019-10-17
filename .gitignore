@@ -27,3 +27,5 @@ hs_err_pid*
 .project
 simple-container/.settings
 *.iml
+.history
+simple-service/.settings
