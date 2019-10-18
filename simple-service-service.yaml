@@ -3,11 +3,10 @@ kind: Service
 metadata:
   name: service-endpoint
 spec:
-  type: NodePort
+  type: ClusterIP
   selector:
     app: simple-service
   ports:
    - port: 80
      name: workshop
      targetPort: 8080
-     nodePort: 32000 #30000-32767
