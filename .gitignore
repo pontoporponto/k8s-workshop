@@ -29,3 +29,5 @@ simple-container/.settings
 *.iml
 .history
 simple-service/.settings
+simple-client/.settings
+heavy-stress/.settings
