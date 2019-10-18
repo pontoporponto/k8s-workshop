@@ -195,3 +195,9 @@ strategy:
 @snap[span-100]
 @code[yaml zoom-12 code-max](simple-service-service.yaml)
 @snapend
+
++++
+
+![Feedback](formQrCode.png)
+
+<a href="https://forms.gle/qcCAusi248K3fCg39">Feedback</a>
