@@ -65,20 +65,13 @@ Senior Backend Developer
 @snapend
 
 +++
-  
-```Bash
-kubectl config set-cluster workshop \
-    --insecure-skip-tls-verify=true --server=
-kubectl config set-credentials participant \
-    --username=admin --password=
-kubectl config set-context workshop \
-    --cluster=workshop --user=participant
-kubectl config use-context workshop
-```
-@[1,2](Define Cluster; Set proper master IP)
-@[3,4](Define credentials; Basic authentication for user admin)
-@[5,6](Context definion; Pair cluster and credentials)
-@[7](Start Using context)
+
+## Setup
+
+@box[bg-gray fragment span-100](Install kubectl (Homebrew, chocolatey, apt-get, download))
+@box[bg-gray fragment span-100](kubectl autocomplete - Google it, please!)
+@box[bg-gray fragment span-100](https://github.com/pontoporponto/k8s-workshop)
+@box[bg-gray fragment span-100](./setup.sh IP PASSWORD)
 
 +++
 
