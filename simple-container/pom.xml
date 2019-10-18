@@ -8,7 +8,7 @@
     <artifactId>simple-container</artifactId>
     <version>1.0-SNAPSHOT</version>
 
-    <name>Workshop - Simple Container</name>
+    <name>Simple Container</name>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
