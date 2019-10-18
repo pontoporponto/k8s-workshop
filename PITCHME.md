@@ -22,6 +22,10 @@ Senior Backend Developer
 @box[bg-orange text-white rounded](Kubernetes Objects)
 @snapend
 
+@snap[west span-40]
+@box[bg-orange text-white rounded](1 Master / N Nodes)
+@snapend
+
 @snap[south-west span-40]
 @box[bg-orange text-white rounded](Declarative Intent)
 @snapend
@@ -127,12 +131,12 @@ kubectl config use-context workshop
 
 ```Yaml
 livenessProbe:
-    httpGet:
-        path: /workshop/simple
-        port: 8080
-    periodSeconds: 10
-    timeoutSeconds: 5
-    failureThreshold: 2
+  httpGet:
+    path: /workshop/simple
+    port: 8080
+  periodSeconds: 10
+  timeoutSeconds: 5
+  failureThreshold: 2
 ```
 
 +++
@@ -145,6 +149,49 @@ livenessProbe:
 +++
 
 ## Rollout Update Policy
+@ul
+- Recreate
+- RollingUpdate
+    - maxSurge
+    - maxUnavailable
+@ulend
 
-@box[bg-gray fragment span-100](replicas: 2)
-@box[bg-gray fragment span-100](kubectl scale deployment \<br />simple-service-workshop --replicas=2)
++++
+
+![RollingUpdate](https://www.exoscale.com/static/syslog/2019-02-07-kubernetes-zero-downtime-deployment/maxsurge1-maxunavailable1.svg)
+
+@snap[source text-04]
+Source: https://www.exoscale.com/syslog/kubernetes-zero-downtime-deployment/
+@snapend
+
++++
+
+```Yaml
+strategy:
+  rollingUpdate:
+    maxUnavailable: 0
+    maxSurge: 0
+```
+
++++
+
+## Service
+@ul
+- ClusterIP
+- NodePort
+- LoadBalancer
+@ulend
+
++++
+
+## Service
+
+@box[bg-gray fragment span-100](kubectl apply -f simple-service-service.yaml)
+@box[bg-gray fragment span-100](kubectl get nodes)
+@box[bg-gray fragment span-100](kubectl describe nodes XXXXXX)
+
++++
+
+@snap[span-100]
+@code[yaml zoom-12 code-max](simple-service-service.yaml)
+@snapend
