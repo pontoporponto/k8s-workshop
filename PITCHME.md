@@ -197,6 +197,8 @@ strategy:
 nodePort: 32000
 ###########
 ###########
+image: gcr.io/pontoporponto/simple-client:latest
+###########
 ###########
 env:
   - name: GROUP
@@ -204,6 +206,15 @@ env:
 ```
 
 +++
+
+## Horizontal Pod Autoscaler
+
+@box[bg-gray fragment span-100](ubectl apply -f heavy-stress-deployment.yam)
+@box[bg-gray fragment span-100](kubectl autoscale deployment heavy-service-workshop --cpu-percent=30 --min=1 --max=10)
+@box[bg-gray fragment span-100](curl -X GET http://localhost:8080/workshop/stress?load=0.5&duration=120)
+
++++
+
 
 ![Feedback](formQrCode.png)
 
