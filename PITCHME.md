@@ -72,6 +72,7 @@ Senior Backend Developer
 @box[bg-gray fragment span-100](kubectl autocomplete - Google it, please!)
 @box[bg-gray fragment span-100](https://github.com/pontoporponto/k8s-workshop)
 @box[bg-gray fragment span-100](./setup.sh IP PASSWORD)
+@box[bg-gray fragment span-100](kubectl get nodes)
 
 +++
 
@@ -88,6 +89,7 @@ Senior Backend Developer
 
 @[3,4](Define Pod name)
 @[6,7,8](Specify container)
+@[9,10,11,12,13](Resources management)
 
 +++
 
@@ -180,14 +182,26 @@ strategy:
 ## Service
 
 @box[bg-gray fragment span-100](kubectl apply -f simple-service-service.yaml)
-@box[bg-gray fragment span-100](kubectl get nodes)
-@box[bg-gray fragment span-100](kubectl describe nodes XXXXXX)
+@box[bg-gray fragment span-100](kubectl exec -it simple-container sh)
+@box[bg-gray fragment span-100](curl -X GET http://service-endpoint/workshop/simple)
 
 +++
 
 @snap[span-100]
 @code[yaml zoom-12 code-max](simple-service-service.yaml)
 @snapend
+
++++
+
+```Yaml
+nodePort: 32000
+###########
+###########
+###########
+env:
+  - name: GROUP
+    value: "workshop-1"  
+```
 
 +++
 
