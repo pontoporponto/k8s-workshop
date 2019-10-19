@@ -3,6 +3,8 @@ FROM frolvlad/alpine-java:jdk8-slim
 # Create app directory on container
 RUN mkdir -p /usr/opt/service
 
+RUN apk --no-cache add curl
+
 # Use it as the working dir
 WORKDIR /usr/opt/service
 
