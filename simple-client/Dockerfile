@@ -9,4 +9,4 @@ WORKDIR /usr/opt/service
 # copy app jar
 COPY target/*-SNAPSHOT.jar simple-client.jar
 
-ENTRYPOINT exec java -jar simple-client.jar
+ENTRYPOINT exec java -Dserver.servlet.context-path=/$GROUP -jar simple-client.jar

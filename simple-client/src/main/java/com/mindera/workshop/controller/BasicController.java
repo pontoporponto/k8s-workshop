@@ -4,12 +4,10 @@ package com.mindera.workshop.controller;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.client.RestTemplate;
 
 @RestController
-@RequestMapping("/workshop")
 public class BasicController {
     private final RestTemplate client;
     private boolean shutdown = Boolean.FALSE;
