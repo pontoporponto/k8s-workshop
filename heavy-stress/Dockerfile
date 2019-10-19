@@ -7,6 +7,6 @@ RUN mkdir -p /usr/opt/service
 WORKDIR /usr/opt/service
 
 # copy app jar
-COPY target/*-SNAPSHOT.jar simple-client.jar
+COPY target/*-SNAPSHOT.jar heavy-stress.jar
 
-ENTRYPOINT exec java -jar simple-client.jar
+ENTRYPOINT exec java -jar heavy-stress.jar
