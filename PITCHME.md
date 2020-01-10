@@ -233,9 +233,20 @@ strategy:
 
 +++
 
-@snap[span-100]
-@code[yaml zoom-12 code-max](simple-service-service.yaml)
-@snapend
+```Yaml
+apiVersion: v1
+kind: Service
+metadata:
+  name: service-endpoint
+spec:
+  type: ClusterIP
+  selector:
+    app: simple-service
+  ports:
+   - port: 80
+     name: workshop
+     targetPort: 8080
+```
 
 +++
 
