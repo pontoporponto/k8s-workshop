@@ -1,11 +1,17 @@
 ## First Steps on Kubernetes
-#### Mindera Tech Day, 19 Oct
+#### MESW - Feup, 4 Dec
 
 @snap[south-east text-06]
 César Rodrigues
-Senior Backend Developer
+Full Cycle Developer@Mindera
 @pontoporponto
 @snapend
+
++++
+
+## Mindera
+#### We use technology to build products we are proud of, with people we love
+#### <a href="https://mindera.com/people-and-culture/" target="_blank">Handbook</a>
 
 +++
 
@@ -19,11 +25,11 @@ Senior Backend Developer
 @snapend
 
 @snap[north-east span-40]
-@box[bg-orange text-white rounded](Kubernetes Objects)
+@box[bg-orange text-white rounded](1 Master / N Nodes)
 @snapend
 
 @snap[west span-40]
-@box[bg-orange text-white rounded](1 Master / N Nodes)
+@box[bg-orange text-white rounded](Kubernetes Objects)
 @snapend
 
 @snap[south-west span-40]
@@ -83,9 +89,21 @@ Senior Backend Developer
 
 +++
 
-@snap[span-100]
-@code[yaml zoom-12 code-max](simple-container-pod.yaml)
-@snapend
+```Yaml
+apiVersion: v1
+kind: Pod
+metadata:
+  name: simple-container-workshop
+spec:
+  containers:
+  - name: simple-container
+    image: gcr.io/pontoporponto/simple-container:latest
+    resources:
+      limits:
+        cpu: 250m
+      requests:
+        memory: 250Mi
+```
 
 @[3,4](Define Pod name)
 @[6,7,8](Specify container)
@@ -100,9 +118,27 @@ Senior Backend Developer
 
 +++
 
-@snap[span-100]
-@code[yaml zoom-11 code-max](simple-service-deployment.yaml)
-@snapend
+```Yaml
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: simple-service-workshop
+spec:
+  selector:
+    matchLabels:
+      app: simple-service
+  template:
+    metadata:
+      labels:
+        app: simple-service
+    spec:
+      containers:
+      - name: simple-container
+        image: gcr.io/pontoporponto/simple-service:latest
+        resources:
+          limits:
+            memory: 50M
+```
 
 +++
 
@@ -209,7 +245,7 @@ env:
 
 ## Horizontal Pod Autoscaler
 
-@box[bg-gray fragment span-100](kubectl apply -f heavy-stress-deployment.yam)
+@box[bg-gray fragment span-100](kubectl apply -f heavy-stress-deployment.yaml)
 @box[bg-gray fragment span-100](kubectl autoscale deployment heavy-service-workshop --cpu-percent=30 --min=1 --max=10)
 @box[bg-gray fragment span-100](curl -X GET http://localhost:8080/workshop/stress?load=0.5&duration=120)
 
