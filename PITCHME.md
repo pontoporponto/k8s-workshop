@@ -124,6 +124,7 @@ spec:
 #### Pod Lifecycle Management
 
 @box[bg-gray fragment span-100](kubectl apply -f simple-service-deployment.yaml)
+@box[bg-gray fragment span-100](kubectl port-forward simple-service-workshop-XXXXXX 8080)
 
 +++
 
