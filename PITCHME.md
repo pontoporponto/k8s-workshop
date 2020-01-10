@@ -1,5 +1,10 @@
 ## First Steps on Kubernetes
-#### MESW - Feup, 4 Dec
+#### Geek Girls PT - Mindera, 11 Jan
+
+@snap[south-west text-06]
+Wi-Fi: Mind Da Guest
+Password: youarewelcome
+@snapend
 
 @snap[south-east text-06]
 César Rodrigues
