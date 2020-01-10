@@ -37,8 +37,12 @@ Full Cycle Developer@Mindera
 @box[bg-orange text-white rounded](Kubernetes Objects)
 @snapend
 
-@snap[south-west span-40]
+@snap[east span-40]
 @box[bg-orange text-white rounded](Declarative Intent)
+@snapend
+
+@snap[south-west span-40]
+@box[bg-orange text-white rounded](Extensible)
 @snapend
 
 @snap[south-east span-40]
