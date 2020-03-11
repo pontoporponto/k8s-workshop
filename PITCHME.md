@@ -228,7 +228,7 @@ strategy:
 ## Service
 
 @box[bg-gray fragment span-100](kubectl apply -f simple-service-service.yaml)
-@box[bg-gray fragment span-100](kubectl exec -it simple-container sh)
+@box[bg-gray fragment span-100](kubectl exec -it simple-container-workshop sh)
 @box[bg-gray fragment span-100](curl -X GET http://service-endpoint/workshop/simple)
 
 +++
