@@ -1,5 +1,8 @@
 FROM frolvlad/alpine-java:jdk8-slim
 
+#Install cURL
+RUN apk --no-cache add curl
+
 # Create app directory on container
 RUN mkdir -p /usr/opt/service
 
