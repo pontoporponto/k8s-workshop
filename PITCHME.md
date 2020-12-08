@@ -1,10 +1,5 @@
 ## First Steps on Kubernetes
-#### Geek Girls PT - Mindera, 11 Jan
-
-@snap[south-west text-06]
-Wi-Fi: Mind Da Guest
-Password: youarewelcome
-@snapend
+#### MESW - Feup, 9 Dec
 
 @snap[south-east text-06]
 César Rodrigues
@@ -30,15 +25,15 @@ Full Cycle Developer@Mindera
 @snapend
 
 @snap[north-east span-40]
-@box[bg-orange text-white rounded](1 Master / N Nodes)
-@snapend
-
-@snap[west span-40]
 @box[bg-orange text-white rounded](Kubernetes Objects)
 @snapend
 
-@snap[east span-40]
+@snap[west span-40]
 @box[bg-orange text-white rounded](Declarative Intent)
+@snapend
+
+@snap[east span-40]
+@box[bg-orange text-white rounded](GitOps)
 @snapend
 
 @snap[south-west span-40]
@@ -95,6 +90,8 @@ Full Cycle Developer@Mindera
 #### 1 Pod == 1 Container
 
 @box[bg-gray fragment span-100](kubectl apply -f simple-container-pod.yaml)
+@box[bg-gray fragment span-100](kubectl get pods)
+@box[bg-gray fragment span-100](kubectl logs simple-container-workshop)
 
 +++
 
@@ -125,6 +122,7 @@ spec:
 
 @box[bg-gray fragment span-100](kubectl apply -f simple-service-deployment.yaml)
 @box[bg-gray fragment span-100](kubectl port-forward simple-service-workshop-XXXXXX 8080)
+@box[bg-gray fragment span-100](http://localhost:8080/workshop/simple)
 
 +++
 
@@ -164,7 +162,6 @@ spec:
 - timeoutSeconds
 - failureThreshold
 - successThreshold
-- initialDelaySeconds
 @ulend
 @snapend
 
