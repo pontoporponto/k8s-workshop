@@ -47,6 +47,39 @@
                     </execution>
                 </executions>
             </plugin>
+
+            <plugin>
+                <groupId>com.google.cloud.tools</groupId>
+                <artifactId>jib-maven-plugin</artifactId>
+                <version>3.1.4</version>
+                <configuration>
+                    <from>
+                        <image>openjdk:8u312-slim</image>
+                    </from>
+                    <containerizingMode>packaged</containerizingMode>
+                    <container>
+                        <creationTime>USE_CURRENT_TIMESTAMP</creationTime>
+                        <appRoot>/usr/opt/service</appRoot>
+                        <workingDirectory>/usr/opt/service</workingDirectory>
+                        <jvmFlags>
+                            <jvmFlag>-XX:MaxRAMPercentage=75.0</jvmFlag>
+                            <jvmFlag>-XX:MinRAMPercentage=75.0</jvmFlag>
+                        </jvmFlags>
+                        <format>OCI</format>
+                    </container>
+                    <to>
+                        <image>gcr.io/pontoporponto/simple-service</image>
+                    </to>
+                </configuration>
+                <executions>
+                    <execution>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>build</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
         </plugins>
     </build>
 </project>
