@@ -1,6 +1,11 @@
-https://caffinc.github.io/2016/03/cpu-load-generator/
-
-
 +++ Resources
 
-https://kubernetic.com/ - Kubernetes Desktop Client
+k9s - https://k9scli.io/
+Octant - https://octant.dev/
+
+Deployment Strategies - https://github.com/ContainerSolutions/k8s-deployment-strategies/tree/master/canary
+
+
++++ Certification
+
+https://github.com/dgkanatsios/CKAD-exercises/blob/master/c.pod_design.md
