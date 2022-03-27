@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "pontoporponto",
+  "private_key_id": "c44403e7d0613d9490df087397fc1150249ebe10",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvAIBADANBgkqhkiG9w0BAQEFAASCBKYwggSiAgEAAoIBAQCRA31LT0iv8OpV\nX8oAJbc68+TXEme/Ts8MtSehKPx467KggZH4g56iUOg1CJSmQ03nCwoBRzMiewZj\nTwP/ju7NToRwSASYwDMjt2ACMF5O9Q6ICKoHESCKvvrUPiuRou7mwR8GyFjgEaIX\n0pNv2ZX5qyu+4RSeqihjyKqkrQVxqTFcPZLEdqn+fN7kiOdqPxY46/zoWqcwNQmx\n79m9t0Z7FyZT3WXM7pdAMNikWqKweksWYigQpFG7ynVpSFkxFH6CZqXt4e6EEOYy\nVHMtcJjGlNeYAQyS7CFm7/rlGaDOpHmtSFLqDzrGfnoPcA5ozpIBBd+eWE61y6v0\n2AO/AOBHAgMBAAECggEABs3WHCl9LJwuMpFLBhS+8yosa5b2fThyaJM7Z8lnhzjv\n6a4KrlFmqREIxCxB5Uc1KYkQEB1KHe0N0K0Nb/lB5Sow9p+6b3xdKejZvWCNnEDN\nTL6zU5+PGlN5q2m7W5r8gKFBFm1iFildpKaBunbIHa3VYKBo+kTbnkr1DsL7hWir\nx/zJzcdCHXfqNcp6PlKyIcQpMIcpRGrjvNR8KjS0kHfpFmfSO+gt+vseVbGggBrp\nNkZTQoThm004oWxemcEDuPGhwyxtS5IMNC19hKhgQJ9ebP2Z/t74l43r5RN07YoQ\nWywKKDPyB6IcaPrVK6PwErBULGSCKdFKB46tjFsD+QKBgQDLMPqumHf2Sxuf0uOH\n0LDOcoJHBX0De7hXGN5G6OS9K4vdHgpkWwXSa5QXy6gYSd+uhoOkS7ZEZSFbHryG\n+sN/4oKtAV/DEB0ZKeOctLfQjqVFevOe24XuTS3lJ1caDeZwzoArUXHo69BgRoBV\n5HTEIbNrx1NZi4A1bXxp6wK/OwKBgQC2s79JhpFmoc+qUnEr6rtIJyCeb12yubgL\nHkDcc62XcvhMw4bcK7F/t8yDgV6F7XAgavGeQaEzM/VzUTTSHl8w6YoAWXg5ReKr\ndrEiN/Xlhfl5RkKLZeXz86tR2XQaRpy+FxxLinQB4lPaFuxg0C8z+G5FKKICCsmv\nkbSWqWdqZQKBgGldPKDM72gICosWEGadERH8zxGFBw6HWU/Q1XJv0i1GJ4DB0yG3\nEY3Luz+bm878f8FAf4Lyv9E3n9RgW+Kipj3qd1i/HalI8c3aquzXyXmcfpdI6ou1\nyf2IiAQMIl6gVp6odk4ALdFadvN1m5buoJ4T27ZH5jDI5fLOk3VZKFOBAoGAVrjT\nX48kjVbZP7uKRJJS+1i3Pv0VuLQ3C+/8UagHChBkk+trpC6JPlp8FR/fQisGQh0B\nO2Fjpu5O38H4FJSeEpWID8poKqdlhIX+ZoOxkJUbadlT1N81W6qZ82wIlEBYPlKx\n95lsn0hTDP48jWfEQCL4FJPI8rc0LMY4thsLH5ECgYAId6F7XuOzKQMgMyrpEL09\nu6Z2yU4/DiwZoaHfxXT/raD+bbQTuYAjFtRW4xZmmFIcnNxSdMqYnhKSwEc/JEYy\nSjRIpgEXwHSinGs+auXpOExi9mvIdbc3uwYMN4BvpFsXoRr2SmeyvY1l2LkI3eq/\nVLJRvGDlWTCrVtt/NvaaGg==\n-----END PRIVATE KEY-----\n",
+  "client_email": "workshop@pontoporponto.iam.gserviceaccount.com",
+  "client_id": "106192691583799362915",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/workshop%40pontoporponto.iam.gserviceaccount.com"
+}
