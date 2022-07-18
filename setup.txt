@@ -1,0 +1,5 @@
+gcloud auth login
+
+gcloud config set project pontoporponto
+
+gcloud container clusters get-credentials workshop --zone europe-west1-b --project pontoporponto
